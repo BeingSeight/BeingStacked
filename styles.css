@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+header {
+    background-color: white;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h1 {
+    color: #84c225;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    color: #666;
+    font-size: 12px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.delivery-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.delivery-time {
+    color: #84c225;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.location {
+    color: #666;
+    font-size: 12px;
+}
+
+.icons {
+    display: flex;
+}
+
+.user-icon, .cart-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.category-nav {
+    background-color: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.category-nav .container {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-btn {
+    background-color: #84c225;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: 20px;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+.offers {
+    margin-left: auto;
+    color: #84c225;
+    font-weight: bold;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-header h2 {
+    color: #333;
+    font-size: 20px;
+}
+
+.view-all {
+    color: #84c225;
+    text-decoration: none;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.discount-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #84c225;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.product-image {
+    height: 150px;
+    background-color: #f9f9f9;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.delivery-time {
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+}
+
+.multipack {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: #e83e8c;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.brand {
+    color: #666;
+    font-size: 12px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #333;
+}
+
+.product-info select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.current-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 10px;
+}
+
+.original-price {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.save-btn {
+    padding: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    color: #84c225;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.add-btn {
+    padding: 8px 20px;
+    background-color: white;
+    border: 1px solid #e83e8c;
+    color: #e83e8c;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-btn:hover {
+    background-color: #e83e8c;
+    color: white;
+}
