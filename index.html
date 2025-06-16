@@ -5,416 +5,607 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeingStacked</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>BeingStacked</h1>
-                <span class="tagline">Everything around that too Fresh!</span>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search for Products...">
-            </div>
-            <div class="delivery-info">
-                <span class="delivery-time">Delivery in 27 mins</span>
-                <span class="location">Athens, Kharghar</span>
-            </div>
-            <div class="icons">
-                <div class="user-icon"></div>
-                <div class="cart-icon"></div>
+    <!-- Header section -->
+<header>
+    <div class="header-container">
+        <!-- Logo and tagline -->
+        <div class="logo-section">
+            <h1>BeingStacked</h1>
+            <p>Everything around that too Fresh!</p>
+        </div>
+        
+        <!-- Search bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search for Products...">
+        </div>
+        
+        <!-- Delivery info -->
+        <div class="delivery-info">
+            <p class="delivery-time">Delivery in <span id="delivery-time">27</span> mins</p>
+            <div class="location-selector-container">
+                <select class="location-selector" id="locationSelector">
+                    <option value="kharghar">Athens, Sector - 35, Kharghar</option>
+                    <option value="vashi">ITM, Sector - 4, Kharghar</option>
+                    <option value="belapur">Galaxy Apt, Bandra West</option>
+                </select>
             </div>
         </div>
-    </header>
-
-    <nav class="category-nav">
-        <div class="container">
-            <div class="dropdown">
-                <button class="dropdown-btn">Shop by Category</button>
+        
+        <!-- User icons with SVG -->
+        <div class="user-icons">
+            <div class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="#333"/>
+                </svg>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Exotic Fruits & Veggies</a></li>
-                <li><a href="#">Tea</a></li>
-                <li><a href="#">Ghee</a></li>
-                <li><a href="#">Nandhini</a></li>
-            </ul>
-            <div class="offers">
-                <span>Offers</span>
+            <a href="cart.html" class="cart-link">
+                <div class="cart-icon">
+                    <div class="cart-count" style="display: none;">0</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation section -->
+<nav>
+    <div class="nav-container">
+        <!-- Shop by Category dropdown -->
+        <div class="category-dropdown">
+            <button id="categoryBtn" class="category-btn">Shop by Category</button>
+            <div id="categoryDropdown" class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="best-sellers.html">Best Sellers</a>
+                <a href="top-offers.html">Top Offers</a>
+                <a href="groceries.html">Groceries</a>
+                <a href="daily-staples.html">Daily Staples</a>
             </div>
         </div>
-    </nav>
+        
+        <!-- Category links -->
+        <div class="nav-links">
+            <!-- Navigation links removed as requested -->
+        </div>
+        
+        <!-- Offers -->
+        <div class="offers-link">
+            <a href="top-offers.html">Offers</a>
+        </div>
+    </div>
+</nav>
 
-    <section class="products">
-        <div class="container">
-            <div class="section-header">
-                <h2>My Smart Basket</h2>
-                <a href="#" class="view-all">View All</a>
+
+    <!-- Banner (Static) -->
+    <section class="product-section">
+        
+        <div class="banner-container static-banner">
+            <div class="banner-content">
+                <p class="banner-subtitle">10X Exclusive Partner</p>
+                <div class="banner-offer">
+                    <span class="offer-prefix">Get everything in cart for</span>
+                    <span class="offer-percentage">FREE</span>
+                    <span class="offer-suffix">if we don't deliver in 27 mins!</span>
+                </div>
+                <button class="shop-now-btn">SHOP NOW</button>
             </div>
-            
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="discount-tag">34% OFF</div>
-                    <div class="product-image">
-                        <img src="Assets/beetroot.png" alt="Fresh red beetroot from Fresho brand">
-                    </div>
-                    <div class="delivery-time">
-                        <span>27 MINS</span>
-                    </div>
-                    <div class="product-info">
-                        <span class="brand">fresho!</span>
-                        <h3>Beetroot (Loose)</h3>
-                        <select>
-                            <option>500 g</option>
-                        </select>
-                        <div class="price">
-                            <span class="current-price">₹28.5</span>
-                            <span class="original-price">₹43</span>
-                        </div>
-                        <div class="actions">
-                            <button class="save-btn">Har Din Sasta!</button>
-                            <button class="add-btn">Add</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="discount-tag">49% OFF</div>
-                    <div class="product-image">
-                        <img src="Assets/shimla_mirch.png" alt="Fresh green shimla_mirch from Fresho brand">
-                    </div>
-                    <div class="delivery-time">
-                        <span>27 MINS</span>
-                    </div>
-                    <div class="product-info">
-                        <span class="brand">fresho!</span>
-                        <h3>Capsicum - Green (Loose)</h3>
-                        <select>
-                            <option>500 g</option>
-                        </select>
-                        <div class="price">
-                            <span class="current-price">₹41.5</span>
-                            <span class="original-price">₹81</span>
-                        </div>
-                        <div class="actions">
-                            <button class="save-btn">Har Din Sasta!</button>
-                            <button class="add-btn">Add</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="discount-tag">20% OFF</div>
-                    <div class="product-image">
-                        <img src="Assets/bhindi.png" alt="Fresh bhindi from Fresho brand">
-                    </div>
-                    <div class="delivery-time">
-                        <span>27 MINS</span>
-                    </div>
-                    <div class="product-info">
-                        <span class="brand">fresho!</span>
-                        <h3>Ladies' Fingers (Loose)</h3>
-                        <select>
-                            <option>500 g</option>
-                        </select>
-                        <div class="price">
-                            <span class="current-price">₹45.6</span>
-                            <span class="original-price">₹57</span>
-                        </div>
-                        <div class="actions">
-                            <button class="save-btn">Har Din Sasta!</button>
-                            <button class="add-btn">Add</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="discount-tag">32% OFF</div>
-                    <div class="product-image">
-                        <img src="Assets/kaanda.png" alt="Fresh teekha kaanda from Fresho brand">
-                    </div>
-                    <div class="multipack">5 PACKS</div>
-                    <div class="delivery-time">
-                        <span>27 MINS</span>
-                    </div>
-                    <div class="product-info">
-                        <span class="brand">fresho!</span>
-                        <h3>Onion</h3>
-                        <select>
-                            <option>5 × 1 kg - Multipack</option>
-                        </select>
-                        <div class="price">
-                            <span class="current-price">₹133</span>
-                            <span class="original-price">₹195</span>
-                        </div>
-                        <div class="actions">
-                            <button class="save-btn">Har Din Sasta!</button>
-                            <button class="add-btn">Add</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="banner-image">
+                <!-- Image displayed on right side, with products -->
+                <img src="Assets/banner.png" alt="Banner">
             </div>
         </div>
     </section>
 
-    <section class="best-sellers">
-        <div class="container">
-            <div class="section-header">
-                <h2>Best Sellers</h2>
-                <div class="controls">
-                    <a href="#" class="view-all">Show More</a>
-                    <div class="carousel-controls">
-                        <button class="prev-btn"><span>&#10094;</span></button>
-                        <button class="next-btn"><span>&#10095;</span></button>
-                    </div>
-                </div>
+
+    <!-- My Smart Basket Section -->
+<section class="product-section">
+    <div class="section-header">
+        <h2>My Smart Basket</h2>
+    </div>
+    
+    <div class="products-container">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="discount-tag">34% OFF</div>
+                <img src="Assets/beetroot.png" alt="Beetroot">
             </div>
-            
-            <div class="product-grid">
-                <div class="product-card best-seller-card">
-                    <div class="discount-tag">34% OFF</div>
-                    <div class="product-image">
-                        <img src="Assets/beetroot.png" alt="Fresh red beetroot from Fresho brand">
-                    </div>
-                    <div class="delivery-time-tag">
-                        <span class="time-icon">&#128337;</span>
-                        <span>27 MINS</span>
-                    </div>
-                    <div class="product-info">
-                        <span class="brand">fresho!</span>
-                        <h3>Beetroot (Loose)</h3>
-                        <div class="weight-selector">
-                            <div class="weight">500 g</div>
-                            <div class="dropdown-icon">&#9660;</div>
-                        </div>
-                        <div class="price">
-                            <span class="current-price">₹28.5</span>
-                            <span class="original-price">₹43</span>
-                        </div>
-                        <div class="actions">
-                            <div class="sasta-dropdown">
-                                <button class="har-din-sasta">Har Din Sasta!</button>
-                                <span class="dropdown-arrow">&#9660;</span>
-                            </div>
-                            <div class="action-buttons">
-                                <button class="bookmark-btn">&#9825;</button>
-                                <button class="add-btn">Add</button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="delivery-time">
+                <span class="clock-icon"></span>
+                <span>27 MINS</span>
+            </div>
+            <div class="product-info">
+                <p class="brand">BeingFresh</p>
+                <h3 class="product-name">Beetroot (Loose)</h3>
+                <div class="weight-selector">
+                    <select>
+                        <option>450 g</option>
+                    </select>
                 </div>
-                
-                <div class="product-card best-seller-card">
-                    <div class="discount-tag">49% OFF</div>
-                    <div class="product-image">
-                        <img src="Assets/shimla_mirch.png" alt="Fresh green shimla_mirch from Fresho brand">
-                    </div>
-                    <div class="delivery-time-tag">
-                        <span class="time-icon">&#128337;</span>
-                        <span>27 MINS</span>
-                    </div>
-                    <div class="product-info">
-                        <span class="brand">fresho!</span>
-                        <h3>Capsicum - Green (Loose)</h3>
-                        <div class="weight-selector">
-                            <div class="weight">500 g</div>
-                            <div class="dropdown-icon">&#9660;</div>
-                        </div>
-                        <div class="price">
-                            <span class="current-price">₹41.5</span>
-                            <span class="original-price">₹81</span>
-                        </div>
-                        <div class="actions">
-                            <div class="sasta-dropdown">
-                                <button class="har-din-sasta">Har Din Sasta!</button>
-                                <span class="dropdown-arrow">&#9660;</span>
-                            </div>
-                            <div class="action-buttons">
-                                <button class="bookmark-btn">&#9825;</button>
-                                <button class="add-btn">Add</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="price-info">
+                    <span class="current-price">₹28.5</span>
+                    <span class="original-price">₹43</span>
                 </div>
-                
-                <div class="product-card best-seller-card">
-                    <div class="discount-tag">20% OFF</div>
-                    <div class="product-image">
-                        <img src="Assets/bhindi.png" alt="Fresh bhindi from Fresho brand">
-                    </div>
-                    <div class="delivery-time-tag">
-                        <span class="time-icon">&#128337;</span>
-                        <span>27 MINS</span>
-                    </div>
-                    <div class="product-info">
-                        <span class="brand">fresho!</span>
-                        <h3>Ladies' Fingers (Loose)</h3>
-                        <div class="weight-selector">
-                            <div class="weight">500 g</div>
-                            <div class="dropdown-icon">&#9660;</div>
-                        </div>
-                        <div class="price">
-                            <span class="current-price">₹45.6</span>
-                            <span class="original-price">₹57</span>
-                        </div>
-                        <div class="actions">
-                            <div class="sasta-dropdown">
-                                <button class="har-din-sasta">Har Din Sasta!</button>
-                                <span class="dropdown-arrow">&#9660;</span>
-                            </div>
-                            <div class="action-buttons">
-                                <button class="bookmark-btn">&#9825;</button>
-                                <button class="add-btn">Add</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="delivery-option">
+                    <span class="har-din-sasta">Har Din Sasta!</span>
                 </div>
-                
-                <div class="product-card best-seller-card">
-                    <div class="discount-tag">32% OFF</div>
-                    <div class="product-image">
-                        <img src="Assets/kaanda.png" alt="Fresh teekha kaanda from Fresho brand">
-                    </div>
-                    <div class="multipack">5 PACKS</div>
-                    <div class="delivery-time-tag">
-                        <span class="time-icon">&#128337;</span>
-                        <span>27 MINS</span>
-                    </div>
-                    <div class="product-info">
-                        <span class="brand">fresho!</span>
-                        <h3>Onion</h3>
-                        <div class="weight-selector">
-                            <div class="weight">5 × 1 kg - Multipack</div>
-                            <div class="dropdown-icon">&#9660;</div>
-                        </div>
-                        <div class="price">
-                            <span class="current-price">₹133</span>
-                            <span class="original-price">₹195</span>
-                        </div>
-                        <div class="actions">
-                            <div class="sasta-dropdown">
-                                <button class="har-din-sasta">Har Din Sasta!</button>
-                                <span class="dropdown-arrow">&#9660;</span>
-                            </div>
-                            <div class="action-buttons">
-                                <button class="bookmark-btn">&#9825;</button>
-                                <button class="add-btn">Add</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="actions">
+                    <button class="add-btn compact">Add</button>
                 </div>
             </div>
         </div>
-    </section>
+        
+        <!-- Product Card 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="discount-tag green-tag">40% OFF</div>
+                <img src="Assets/bhindi.png" alt="Capsicum">
+            </div>
+            <div class="delivery-time">
+                <span class="clock-icon"></span>
+                <span>27 MINS</span>
+            </div>
+            <div class="product-info">
+                <p class="brand">BeingFresh</p>
+                <h3 class="product-name">Ladies' Fingers (Loose)</h3>
+                <div class="weight-selector">
+                    <select>
+                        <option>450 g</option>
+                    </select>
+                </div>
+                <div class="price-info">
+                    <span class="current-price">₹41.5</span>
+                    <span class="original-price">₹61</span>
+                </div>
+                <div class="delivery-option">
+                    <span class="har-din-sasta">Har Din Sasta!</span>
+                </div>
+                <div class="actions">
+                    <button class="add-btn compact">Add</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Card 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="discount-tag green-tag">₹5 OFF</div>
+                <img src="Assets/dalda.png" alt="Dalda Vanaspati">
+            </div>
+            <div class="delivery-time">
+                <span class="clock-icon"></span>
+                <span>27 MINS</span>
+            </div>
+            <div class="product-info">
+                <p class="brand">Dalda</p>
+                <h3 class="product-name">Vanaspati</h3>
+                <div class="weight-selector">
+                    <select>
+                        <option>450 g</option>
+                    </select>
+                </div>
+                <div class="price-info">
+                    <span class="current-price">₹99.9</span>
+                    <span class="original-price">₹105</span>
+                </div>
+                <div class="delivery-option">
+                    <span class="har-din-sasta">Har Din Sasta!</span>
+                </div>
+                <div class="actions">
+                    <button class="add-btn compact">Add</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Card 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="discount-tag orange-tag">32% OFF</div>
+                <img src="Assets/kaanda.png" alt="Onion">
+                <div class="multipack-badge">5 PACKS</div>
+            </div>
+            <div class="delivery-time">
+                <span class="clock-icon"></span>
+                <span>27 MINS</span>
+            </div>
+            <div class="product-info">
+                <p class="brand">BeingFresh</p>
+                <h3 class="product-name">Onion</h3>
+                <div class="weight-selector">
+                    <select>
+                        <option>5 × 0.800 kg - Multipack</option>
+                    </select>
+                </div>
+                <div class="price-info">
+                    <span class="current-price">₹133</span>
+                    <span class="original-price">₹196</span>
+                </div>
+                <div class="delivery-option">
+                    <span class="har-din-sasta">Har Din Sasta!</span>
+                </div>
+                <div class="actions">
+                    <button class="add-btn compact">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <section class="top-offers">
-        <div class="container">
-            <h2 class="section-title">Top Offers</h2>
+<!-- Best Sellers Section -->
+<section class="product-section">
+    <div class="section-header">
+        <h2>Best Sellers</h2>
+    </div>
+    
+    <div class="products-container">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="discount-tag orange-tag">₹10 OFF</div>
+                <img src="Assets/buffalo-milk.png" alt="Buffalo Milk">
+            </div>
+            <div class="delivery-time">
+                <span class="clock-icon"></span>
+                <span>15 MINS</span>
+            </div>
+            <div class="product-info">
+                <p class="brand">Amul</p>
+                <h3 class="product-name">Buffalo Milk</h3>
+                <div class="weight-selector">
+                    <select>
+                        <option>450 ml - Pouch</option>
+                    </select>
+                </div>
+                <div class="price-info">
+                    <span class="current-price">₹37</span>
+                </div>
+                <div class="delivery-option">
+                    <span class="har-din-sasta">Har Din Sasta!</span>
+                </div>
+                <div class="actions">
+                    <button class="add-btn compact">Add</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Card 2 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="discount-tag">₹10 OFF</div>
+                <img src="Assets/drinking-water.png" alt="Drinking Water">
+            </div>
+            <div class="delivery-time">
+                <span class="clock-icon"></span>
+                <span>15 MINS</span>
+            </div>
+            <div class="product-info">
+                <p class="brand">Bisleri</p>
+                <h3 class="product-name">Drinking Water With Added Minerals</h3>
+                <div class="weight-selector">
+                    <select>
+                        <option>10 L - Can</option>
+                    </select>
+                </div>
+                <div class="price-info">
+                    <span class="current-price">₹110</span>
+                    <span class="original-price">₹120</span>
+                </div>
+                <div class="delivery-option">
+                    <span class="har-din-sasta">Har Din Sasta!</span>
+                </div>
+                <div class="actions">
+                    <button class="add-btn compact">Add</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Card 3 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="discount-tag green-tag">44% OFF</div>
+                <img src="Assets/shimla_mirch.png" alt="Capsicum - Green">
+            </div>
+            <div class="delivery-time">
+                <span class="clock-icon"></span>
+                <span>15 MINS</span>
+            </div>
+            <div class="product-info">
+                <p class="brand">BeingFresh</p>
+                <h3 class="product-name">Capsicum - Green (Loose)</h3>
+                <div class="weight-selector">
+                    <select>
+                        <option>450 g</option>
+                    </select>
+                </div>
+                <div class="price-info">
+                    <span class="current-price">₹44</span>
+                    <span class="original-price">₹78</span>
+                </div>
+                <div class="delivery-option">
+                    <span class="har-din-sasta">Har Din Sasta!</span>
+                </div>
+                <div class="actions">
+                    <button class="add-btn compact">Add</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Product Card 4 -->
+        <div class="product-card">
+            <div class="product-image">
+                <div class="discount-tag orange-tag">37% OFF</div>
+                <img src="Assets/ghee.png" alt="Ghee">
+            </div>
+            <div class="delivery-time">
+                <span class="clock-icon"></span>
+                <span>15 MINS</span>
+            </div>
+            <div class="product-info">
+                <p class="brand">BeingFresh</p>
+                <h3 class="product-name">Cow Ghee</h3>
+                <div class="weight-selector">
+                    <select>
+                        <option>450 g</option>
+                    </select>
+                </div>
+                <div class="price-info">
+                    <span class="current-price">₹317</span>
+                    <span class="original-price">₹330</span>
+                </div>
+                <div class="delivery-option">
+                    <span class="har-din-sasta">Har Din Sasta!</span>
+                </div>
+                <div class="actions">
+                    <button class="add-btn compact">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Top Offers Section -->
+    <section class="product-section">
+        <div class="section-header">
+            <h2>Top Offers</h2>
+        </div>
+        
+        <div class="offers-grid">
+            <div class="offer-card">
+                <div class="offer-header">
+                    <h3>DEALS OF</h3>
+                    <h2>THE WEEK</h2>
+                </div>
+                <div class="offer-footer">
+                    <a href="#" class="view-offers">View offers &gt;</a>
+                </div>
+            </div>
             
-            <div class="offers-grid">
-                <div class="offer-card">
-                    <div class="offer-header">
-                        <h3>DEALS OF</h3>
-                        <h2>THE WEEK</h2>
-                    </div>
-                    <div class="offer-footer">
-                        <a href="#" class="view-offers">View offers &gt;</a>
-                    </div>
+            <div class="offer-card">
+                <div class="offer-header">
+                    <h3>BIG PACK</h3>
+                    <h2>BIGGER</h2>
+                    <h2>DISCOUNTS</h2>
                 </div>
-                
-                <div class="offer-card">
-                    <div class="offer-header">
-                        <h3>BIG PACK</h3>
-                        <h2>BIGGER</h2>
-                        <h2>DISCOUNTS</h2>
-                    </div>
-                    <div class="offer-footer">
-                        <a href="#" class="view-offers">View offers &gt;</a>
-                    </div>
+                <div class="offer-footer">
+                    <a href="#" class="view-offers">View offers &gt;</a>
                 </div>
-                
-                <div class="offer-card">
-                    <div class="offer-header">
-                        <h3>COMBOS</h3>
-                        <h2>YOU</h2>
-                        <h2>CAN'T MISS</h2>
-                    </div>
-                    <div class="offer-footer">
-                        <a href="#" class="view-offers">View offers &gt;</a>
-                    </div>
+            </div>
+            
+            <div class="offer-card">
+                <div class="offer-header">
+                    <h3>COMBOS</h3>
+                    <h2>YOU</h2>
+                    <h2>CAN'T MISS</h2>
                 </div>
-                
-                <div class="offer-card">
-                    <div class="offer-header">
-                        <h3>THE</h3>
-                        <h2>₹30 CORNER</h2>
-                    </div>
-                    <div class="offer-footer">
-                        <a href="#" class="view-offers">View offers &gt;</a>
-                    </div>
+                <div class="offer-footer">
+                    <a href="#" class="view-offers">View offers &gt;</a>
+                </div>
+            </div>
+            
+            <div class="offer-card">
+                <div class="offer-header">
+                    <h3>THE</h3>
+                    <h2>₹30 CORNER</h2>
+                </div>
+                <div class="offer-footer">
+                    <a href="#" class="view-offers">View offers &gt;</a>
                 </div>
             </div>
         </div>
     </section>
     
-    <section class="Must Stacked">
-        <div class="container">
-            <h2 class="section-title">Fruits and Vegetables</h2>
+    <!-- Fruits and Vegetables Section -->
+    <section class="product-section">
+        <div class="section-header">
+            <h2>Groceries</h2>
+        </div>
+        
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="Assets/veggies.png" alt="Veggies">
+                </div>
+                <div class="category-info">
+                    <h3>Fresh Vegetables</h3>
+                    <div class="category-discount">
+                        <span class="discount-line"></span>
+                        <span class="discount-text">MIN 27% OFF</span>
+                    </div>
+                </div>
+            </div>
             
-            <div class="category-grid">
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="Assets/veggies.png" alt="Veggies">
-                    </div>
-                    <div class="category-info">
-                        <h3>Fresh Vegetables</h3>
-                        <div class="category-discount">
-                            <span class="discount-line"></span>
-                            <span class="discount-text">MIN 27% OFF</span>
-                        </div>
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="Assets/fruits.png" alt="Fruits">
+                </div>
+                <div class="category-info">
+                    <h3>Fresh Fruits</h3>
+                    <div class="category-discount">
+                        <span class="discount-line"></span>
+                        <span class="discount-text">MIN 27% OFF</span>
                     </div>
                 </div>
-                
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="Assets/fruits.png" alt="Fruits">
-                    </div>
-                    <div class="category-info">
-                        <h3>Fresh Fruits</h3>
-                        <div class="category-discount">
-                            <span class="discount-line"></span>
-                            <span class="discount-text">MIN 27% OFF</span>
-                        </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="Assets/dairy.png" alt="Dairy">
+                </div>
+                <div class="category-info">
+                    <h3>Dairy</h3>
+                    <div class="category-discount">
+                        <span class="discount-line"></span>
+                        <span class="discount-text">MIN 27% OFF</span>
                     </div>
                 </div>
-                
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="Assets/dairy.png" alt="Dairy">
-                    </div>
-                    <div class="category-info">
-                        <h3>Dairy</h3>
-                        <div class="category-discount">
-                            <span class="discount-line"></span>
-                            <span class="discount-text">MIN 27% OFF</span>
-                        </div>
-                    </div>
+            </div>
+            
+            <div class="category-card">
+                <div class="category-image">
+                    <img src="Assets/snacks.png" alt="Snacks">
                 </div>
-                
-                <div class="category-card">
-                    <div class="category-image">
-                        <img src="Assets/snacks.png" alt="Snacks">
-                    </div>
-                    <div class="category-info">
-                        <h3>Snacks</h3>
-                        <div class="category-discount">
-                            <span class="discount-line"></span>
-                            <span class="discount-text">MIN 27% OFF</span>
-                        </div>
+                <div class="category-info">
+                    <h3>Snacks</h3>
+                    <div class="category-discount">
+                        <span class="discount-line"></span>
+                        <span class="discount-text">MIN 27% OFF</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Your Daily Staples Section -->
+    <section class="product-section">
+        <div class="section-header">
+            <h2>Your Daily Staples</h2>
+        </div>
+        
+        <div class="staples-grid">
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/atta.png" alt="Atta & Flour">
+                </div>
+                <div class="staples-info">
+                    <h3>Atta & Flour</h3>
+                </div>
+            </div>
+            
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/rice.png" alt="Rice & Rice Products">
+                </div>
+                <div class="staples-info">
+                    <h3>Rice & Rice Products</h3>
+                </div>
+            </div>
+            
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/dals.png" alt="Dals & Pulses">
+                </div>
+                <div class="staples-info">
+                    <h3>Dals & Pulses</h3>
+                </div>
+            </div>
+            
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/oils.png" alt="Cooking Oils & Ghee">
+                </div>
+                <div class="staples-info">
+                    <h3>Cooking Oils & Ghee</h3>
+                </div>
+            </div>
+            
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/dry_fruits.png" alt="Dry Fruits">
+                </div>
+                <div class="staples-info">
+                    <h3>Dry Fruits</h3>
+                </div>
+            </div>
+            
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/spices.png" alt="Salt, Sugar & Jaggery">
+                </div>
+                <div class="staples-info">
+                    <h3>Salt, Sugar & Jaggery</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About BeingStacked Section -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2>BeingStacked – online grocery store</h2>
+            
+            <div class="about-text">
+                <p><strong>BeingStacked – Where Fresh Meets Fast (And Smart)</strong></p>
+            
+                <p>BeingStacked.com is a concept-driven online grocery platform created as part of an academic project for ITM
+                    Skills University – Semester 2, 2025. Designed to explore real-world user experience and grocery tech workflows,
+                    BeingStacked simulates a smart, rapid-delivery supermarket tailored for India’s evolving digital landscape.</p>
+            
+                <p>It is inspired from BigBasket, BeingStacked proudly integrates with GRM Overseas Ltd., a globally
+                    reputed basmati rice exporter, and its consumer-facing brand 10X—known for premium rice, atta, pulses, and
+                    ready-to-cook offerings. This collaboration reflects our focus on quality-first products and real-scenario
+                    market insights.</p>
+            
+                <p>Though fictional, the platform mimics real-time inventory, discount logic, and delivery modeling: browse curated
+                    fresh vegetables, fruits, dairy, and snacks, categorized for clarity.</p>
+            
+                <p>Experience a 27-minute delivery promise—themed to test UI/UX concepts for quick commerce. Access convenient
+                    delivery slots from early mornings to late evenings, and interact with intelligent modules like “Har Din Sasta”
+                    and dynamic combo deals.</p>
+            
+                <p>BeingStacked does not currently operate commercially but functions as a prototype showcasing design thinking,
+                    frontend integration, and product categorization within the fast-paced grocery sector. The goal? Learning by
+                    building something that feels real.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-links-container">
+                    <div class="footer-links-column">
+                        <a href="#">Home</a>
+                        <a href="mailto:mail@beingstacked.com">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-downloads">
+                    <h4>Download Our App</h4>
+                    <div class="app-downloads">
+                        <a href="https://play.google.com/store/games" class="app-download-link">
+                            <img src="Assets/google-play.png" alt="Get it on Google Play">
+                        </a>
+                        <a href="https://www.apple.com/app-store/" class="app-download-link">
+                            <img src="Assets/app-store.png" alt="Download on the App Store">
+                        </a>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/BeingSeight" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/BeingSeight" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>Copyright © 2024-2028 - Being Seight for Education Purpose Only</p>
+        </div>
+    </footer>
 </body>
 </html>

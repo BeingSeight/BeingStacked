@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Staples - BeingStacked</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header section -->
+<header>
+    <div class="header-container">
+        <!-- Logo and tagline -->
+        <div class="logo-section">
+            <h1>BeingStacked</h1>
+            <p>Everything around that too Fresh!</p>
+        </div>
+        
+        <!-- Search bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search for Products...">
+        </div>
+        
+        <!-- Delivery info -->
+        <div class="delivery-info">
+            <p class="delivery-time">Delivery in <span id="delivery-time">27</span> mins</p>
+            <div class="location-selector-container">
+                <select class="location-selector" id="locationSelector">
+                    <option value="kharghar">Athens, Kharghar</option>
+                    <option value="vashi">Nerul, Vashi</option>
+                    <option value="belapur">CBD Belapur</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- User icons with SVG -->
+        <div class="user-icons">
+            <div class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" fill="#333"/>
+                </svg>
+            </div>
+            <a href="cart.html" class="cart-link">
+                <div class="cart-icon">
+                    <div class="cart-count" style="display: none;">0</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" fill="white"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- Navigation section -->
+<nav>
+    <div class="nav-container">
+        <!-- Shop by Category dropdown -->
+        <div class="category-dropdown">
+            <button id="categoryBtn" class="category-btn">Shop by Category</button>
+            <div id="categoryDropdown" class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="best-sellers.html">Best Sellers</a>
+                <a href="top-offers.html">Top Offers</a>
+                <a href="groceries.html">Groceries</a>
+                <a href="daily-staples.html">Daily Staples</a>
+            </div>
+        </div>
+        
+        <!-- Category links -->
+        <div class="nav-links">
+            <!-- Navigation links removed as requested -->
+        </div>
+        
+        <!-- Offers -->
+        <div class="offers-link">
+            <a href="top-offers.html">Offers</a>
+        </div>
+    </div>
+</nav>
+
+    <!-- Your Daily Staples Section (Expanded) -->
+    <section class="product-section expanded-section">
+        <div class="section-header">
+            <h2>Your Daily Staples</h2>
+        </div>
+        
+        <div class="staples-grid expanded-grid">
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/atta.png" alt="Atta & Flour">
+                </div>
+                <div class="staples-info">
+                    <h3>Atta & Flour</h3>
+                </div>
+            </div>
+            
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/rice.png" alt="Rice & Rice Products">
+                </div>
+                <div class="staples-info">
+                    <h3>Rice & Rice Products</h3>
+                </div>
+            </div>
+            
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/dals.png" alt="Dals & Pulses">
+                </div>
+                <div class="staples-info">
+                    <h3>Dals & Pulses</h3>
+                </div>
+            </div>
+            
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/oils.png" alt="Cooking Oils & Ghee">
+                </div>
+                <div class="staples-info">
+                    <h3>Cooking Oils & Ghee</h3>
+                </div>
+            </div>
+            
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/dry_fruits.png" alt="Dry Fruits">
+                </div>
+                <div class="staples-info">
+                    <h3>Dry Fruits</h3>
+                </div>
+            </div>
+            
+            <div class="staples-card">
+                <div class="staples-image">
+                    <img src="Assets/spices.png" alt="Salt, Sugar & Jaggery">
+                </div>
+                <div class="staples-info">
+                    <h3>Salt, Sugar & Jaggery</h3>
+                </div>
+            </div>
+            
+    </section>
+
+   <!-- Tea Time Bakes Section (Static) -->
+    <section class="product-section">
+        <div class="section-header">
+            <h2>Tea Time Bakes</h2>
+        </div>
+        
+        <div class="banner-container static-banner">
+            <div class="banner-content">
+                <p class="banner-subtitle">10X Official Exclusive Partner</p>
+                <div class="banner-offer">
+                    <span class="offer-prefix">Get everything in cart for</span>
+                    <span class="offer-percentage">FREE</span>
+                    <span class="offer-suffix">if we don't deliver in 27 mins!</span>
+                </div>
+                <button class="shop-now-btn">SHOP NOW</button>
+            </div>
+            <div class="banner-image">
+                <!-- Image displayed on right side, with products -->
+                <img src="Assets/banner.png" alt="Banner">
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-links-container">
+                    <div class="footer-links-column">
+                        <a href="#">Home</a>
+                        <a href="mailto:mail@beingstacked.com">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="footer-downloads">
+                    <h4>Download Our App</h4>
+                    <div class="app-downloads">
+                        <a href="https://play.google.com/store/games" class="app-download-link">
+                            <img src="Assets/google-play.png" alt="Get it on Google Play">
+                        </a>
+                        <a href="https://www.apple.com/app-store/" class="app-download-link">
+                            <img src="Assets/app-store.png" alt="Download on the App Store">
+                        </a>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/BeingSeight" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/BeingSeight" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>Copyright © 2024-2028 - Being Seight for Education Purpose Only</p>
+        </div>
+    </footer>
+</body>
+</html>
